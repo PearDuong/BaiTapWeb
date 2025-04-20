@@ -14,7 +14,7 @@
   <div class="bg-primary text-white py-2 px-3 d-flex justify-content-between align-items-center topnav">
     <div>
       <a href="#" class="text-white text-decoration-none me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
-        <i class="fas fa-user"></i> TÀI KHOẢN
+        <i class="fas fa-user"></i> ĐĂNG NHẬP
       </a>
       <a href="#" class="text-white text-decoration-none me-3" onclick="logout()">
         <i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT
@@ -86,11 +86,68 @@
     </div>
   </nav>
 
+
+
   <div class="container py-4">
     <div class="row" id="productList">
       <!-- Sản phẩm sẽ được thêm ở đây bằng JS -->
     </div>
   </div>
+  
+
+  <!-- footer -->
+  <footer style="background-color: #f5f5f5; padding: 40px 20px; font-family: Arial, sans-serif;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+      
+      <!-- Chính sách mua hàng -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Chính sách mua hàng</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li><a style="text-decoration: none;" href="../html/dieukiengiaodich.html">Điều kiện giao dịch chung</a></li>
+          <li><a style="text-decoration: none;" href="../html/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+          <li><a style="text-decoration: none;" href="../html/csdoitra.html">Chính sách đổi trả</a></li>
+          <li><a style="text-decoration: none;" href="../html/csthanhtoan.html">Chính sách thanh toán</a></li>
+        </ul>
+      </div>
+  
+      <!-- Thông tin -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Thông tin</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>2 thành viên thành lập gồm:</a></li>
+          <li>Nguyễn Đặng Nhật Duy - 23655571</li>
+          <li>Lê Văn Dương - 23660591</li>
+        </ul>
+      </div>
+  
+      <!-- Email liên hệ -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Email liên hệ</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>Hỗ trợ khách hàng: <a href="mailto:cskh@techword.vn">cskh@techword.vn</a></li>
+          <li>Báo giá: <a href="mailto:baogia@techword.vn">baogia@techword.vn</a></li>
+          <li>Hợp tác: <a href="mailto:hoptac@techword.vn">hoptac@techword.vn</a></li>
+        </ul>
+      </div>
+  
+      <!-- Địa chỉ liên hệ -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Địa chỉ liên hệ</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>Địa chỉ:Nguyễn Văn Bảo,Q.Gò Vấp</li>
+          <li>Điện thoại: <a href="tel:+84901234567">0905243717</a></li>
+          <li>Giờ làm việc: Thứ 2 đến Thứ 6</li>
+          <li>Gọi mua hàng miễn phí:<a href="#">1800 1234</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Hàng ngang hiển thị hình ảnh ngân hàng -->
+    <div style="text-align: center; border-top: 1px solid #ddd; padding-top: 20px; margin-top: 20px;">
+      <h5 style="margin-bottom: 10px;">Danh sách các ngân hàng thanh toán online</h5>
+      <img src="../image/vnpay_banks.png" alt="Ngân hàng hỗ trợ" style="max-width: 100%; height: auto;">
+    </div>
+  </footer>
   
 
   <!-- Modal: Đăng nhập -->

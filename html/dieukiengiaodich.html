@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Điều kiện giao dịch chung | Techword</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+ <!-- Topnav -->
+ <div class="bg-primary text-white py-2 px-3 d-flex justify-content-between align-items-center topnav">
+    <div>
+      <a href="#" class="text-white text-decoration-none me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="fas fa-user"></i> TÀI KHOẢN
+      </a>
+      <a href="#" class="text-white text-decoration-none me-3" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT
+      </a>
+      <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+        <i class="fas fa-user-plus"></i> ĐĂNG KÝ
+      </a>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-wordpress"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-vk"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-spotify"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="container py-4 d-flex justify-content-between align-items-center header">
+    <div class="logo">
+        <a href="home.html"><img src="../image/1logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
+    </div>
+    <div class="search-bar w-50">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Tìm sản phẩm...">
+        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <div class="cart d-flex align-items-center">
+        <div class="me-4 position-relative">
+            <i class="fas fa-heart fs-4 text-primary"></i>
+            <span id="favoriteCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+          </div>
+          
+      <div class="position-relative d-flex align-items-center border rounded-pill px-3 py-2">
+        <i class="fas fa-shopping-cart me-2 text-primary"></i>
+        <span>Tổng cộng: 0 ₫</span>
+        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <nav class="bg-primary py-2">
+    <div class="container d-flex flex-wrap justify-content-between text-white">
+        <div class="dropdown dropdown-hover me-3">
+            <a class="dropdown-toggle text-white text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-list"></i> DANH MỤC SẢN PHẨM
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Samsung</a></li>
+              <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+              <li><a class="dropdown-item" href="#">Oppo</a></li>
+              <li><a class="dropdown-item" href="#">Vivo</a></li>
+              <li><a class="dropdown-item" href="#">iPhone</a></li>
+              <li><a class="dropdown-item" href="#">Realme</a></li>
+              <li><a class="dropdown-item" href="#">Nokia</a></li>
+            </ul>
+          </div>
+                   
+      <a href="#" class="text-white text-decoration-none me-3"><i class="fab fa-cc-visa"></i> THANH TOÁN</a>
+      <a href="#" class="text-white text-decoration-none me-3"><i class="fas fa-newspaper"></i> TIN TỨC</a>
+      <a href="#" class="text-white text-decoration-none me-3"><i class="fas fa-shopping-cart"></i> MUA HÀNG TRỰC TUYẾN</a>
+      <a href="#" class="text-white text-decoration-none me-3"><i class="fas fa-hourglass-half"></i> MUA TRẢ GÓP</a>
+      <a href="#" class="text-white text-decoration-none"><i class="fas fa-percent"></i> KHUYẾN MÃI</a>
+    </div>
+  </nav>
+
+    <!-- nội dung -->
+  <div class="container py-5">
+    <h1 class="text-primary mb-4">Điều kiện giao dịch chung</h1>
+
+    <h4>Điều 1. Định nghĩa</h4>
+    <p>1.1 Công Ty: nghĩa là Công Ty Cổ Phần Thương Mại – Dịch Vụ TechWorld, được thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số xxxxxxxx do Phòng Đăng ký kinh doanh - Sở Kế Hoạch và Đầu Tư Thành phố Hồ Chí Minh cấp lần đầu ngày xx/x/xxxx.</p>
+    <p>1.2 Sản Phẩm: nghĩa là các hàng hóa, dịch vụ, được kinh doanh trên Website TechWorld.</p>
+    <p>1.3 Điều Khoản Và Điều Kiện: nghĩa là bản Điều Khoản Và Điều Kiện Giao Dịch Chung này và các phiên bản Điều Khoản Và Điều Kiện Giao Dịch Chung cập nhật, bổ sung, thay đổi tại từng thời điểm, được soạn thảo dựa trên các văn bản pháp luật hiện hành của Việt Nam.</p>
+    
+    <h4>Điều 2. Phạm vi áp dụng</h4>
+    <p>Điều Khoản Và Điều Kiện sẽ được áp dụng đối với bất kỳ và tất cả các hoạt động mua bán các Sản Phẩm giữa Khách Hàng và Công Ty thông qua Website TechWorld.</p>
+
+    <h4>Điều 3. Giá bán sản phẩm, hóa đơn và thanh toán</h4>
+    <p>3.1 Giá bán sản phẩm: Giá của Sản Phẩm được niêm yết trên Website TechWord tại thời điểm Đơn Đặt Hàng được đặt. Giá này đã bao gồm thuế GTGT áp dụng theo quy định pháp luật hiện hành và không bao gồm khoản giảm giá, chiết khấu, phí vận chuyển, và các chi phí khác phát sinh theo yêu cầu của Khách Hàng.</p>
+    <p>3.2 Hoá đơn: Công Ty sẽ cung cấp hóa đơn tài chính hợp lệ cho Khách Hàng cho mỗi Đơn Đặt Hàng. </p>
+    
+    <h4>Điều 4. Xác lập đơn hàng</h4>
+    <p>Bất kỳ thông tin về Sản Phẩm được đưa ra trên Website TechWord không được hiểu là đề nghị giao kết hợp đồng của Công Ty gửi tới Khách Hàng.</p>
+
+    <h4>Điều 5. Chương trình khuyến mại</h4>
+    <p>Để đảm bảo tính công bằng và quyền lợi cho các Khách Hàng, Công Ty theo quyết định của mình có quyền áp dụng các điều kiện hạn chế trong việc triển khai các chương trình khuyến mại (“Chương Trình Khuyến Mại”), bao gồm nhưng không giới hạn các điều kiện sau:</p>
+    <li>Giới hạn về số lượng Sản Phẩm trong mỗi Chương Trình Khuyến Mại, có thể là giới hạn trên mỗi Đơn Đặt Hàng; giới hạn trên mỗi Khách Hàng và/hoặc tài khoản; giới hạn mục đích mua Sản Phẩm (không được kinh doanh, mua đi bán lại, chuyển nhượng, chuyển giao dưới bất kỳ hình thức nào,…)</li>
+    <li>Điều kiện giới hạn khác do Công Ty và/hoặc thương nhân phối hợp cùng thực hiện Chương Trình Khuyến Mại đưa ra và được nêu cụ thể tại nội dung của Sản Phẩm và/hoặc quy định chi tiết trong từng Chương Trình Khuyến Mại.</li>
+    <li>Các quy định khác được nêu tại Chính sách liên quan (nếu có) được đăng tải trên Website TechWord tại từng thời điểm.</li>
+
+</div>
+
+  <!-- Footer -->
+  
+  <!-- footer -->
+  <footer style="background-color: #f5f5f5; padding: 40px 20px; font-family: Arial, sans-serif;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+      
+      <!-- Chính sách mua hàng -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Chính sách mua hàng</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li><a style="text-decoration: none;" href="../html/dieukiengiaodich.html">Điều kiện giao dịch chung</a></li>
+          <li><a style="text-decoration: none;" href="../html/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+          <li><a style="text-decoration: none;" href="../html/csdoitra.html">Chính sách đổi trả</a></li>
+          <li><a style="text-decoration: none;" href="../html/csthanhtoan.html">Chính sách thanh toán</a></li>
+        </ul>
+      </div>
+  
+      <!-- Thông tin -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Thông tin</h5>
+        <ul style="list-style: none; padding: 0;">
+            <li>2 thành viên thành lập gồm:</a></li>
+            <li>Nguyễn Đặng Nhật Duy - 23655571</li>
+            <li>Lê Văn Dương - 23660591</li>
+          </ul>
+      </div>
+  
+      <!-- Email liên hệ -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Email liên hệ</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>Hỗ trợ khách hàng: <a href="mailto:cskh@techword.vn">cskh@techword.vn</a></li>
+          <li>Báo giá: <a href="mailto:baogia@techword.vn">baogia@techword.vn</a></li>
+          <li>Hợp tác: <a href="mailto:hoptac@techword.vn">hoptac@techword.vn</a></li>
+        </ul>
+      </div>
+  
+      <!-- Địa chỉ liên hệ -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Địa chỉ liên hệ</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>Địa chỉ: Nguyễn Văn Bảo,Q.Gò Vấp</li>
+          <li>Điện thoại: <a href="tel:+84901234567">0905243717</a></li>
+          <li>Giờ làm việc: Thứ 2 đến Thứ 6</li>
+          <li>Gọi mua hàng miễn phí:<a href="#">1800 1234</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Hàng ngang hiển thị hình ảnh ngân hàng -->
+    <div style="text-align: center; border-top: 1px solid #ddd; padding-top: 20px; margin-top: 20px;">
+      <h5 style="margin-bottom: 10px;">Danh sách các ngân hàng thanh toán online</h5>
+      <img src="../image/vnpay_banks.png" alt="Ngân hàng hỗ trợ" style="max-width: 100%; height: auto;">
+    </div>
+  </footer>
+</body>
+</html>
