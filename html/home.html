@@ -6,6 +6,8 @@
   <title>TechWorld - Trang chủ</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,15 +15,16 @@
   <!-- Topnav -->
   <div class="bg-primary text-white py-2 px-3 d-flex justify-content-between align-items-center topnav">
     <div>
-      <a href="#" class="text-white text-decoration-none me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+      <a href="#" id="loginLink" class="text-white text-decoration-none me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
         <i class="fas fa-user"></i> ĐĂNG NHẬP
       </a>
-      <a href="#" class="text-white text-decoration-none me-3" onclick="logout()">
+      <a href="#" id="logoutLink" class="text-white text-decoration-none me-3 d-none">
         <i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT
       </a>
-      <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+      <a href="#" id="registerLink" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">
         <i class="fas fa-user-plus"></i> ĐĂNG KÝ
       </a>
+      <span id="userName" class="text-white text-decoration-none d-none"></span>
     </div>
     <div class="d-flex gap-3">
       <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
@@ -37,7 +40,7 @@
   <!-- Header -->
   <div class="container py-4 d-flex justify-content-between align-items-center header">
     <div class="logo">
-        <a href="home.html"><img src="../image/1logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
+        <a href="home.html"><img src="../image/logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
     </div>
     <div class="search-bar w-50">
       <div class="input-group">
@@ -78,10 +81,9 @@
             </ul>
           </div>
                    
-      <a href="#" class="text-white text-decoration-none me-3"><i class="fab fa-cc-visa"></i> THANH TOÁN</a>
-      <a href="#" class="text-white text-decoration-none me-3"><i class="fas fa-newspaper"></i> TIN TỨC</a>
-      <a href="#" class="text-white text-decoration-none me-3"><i class="fas fa-shopping-cart"></i> MUA HÀNG TRỰC TUYẾN</a>
-      <a href="#" class="text-white text-decoration-none me-3"><i class="fas fa-hourglass-half"></i> MUA TRẢ GÓP</a>
+      <a href="../html/tintuc.html" class="text-white text-decoration-none me-3"><i class="fas fa-newspaper"></i> TIN TỨC</a>
+      <a href="../html/muahangtructuyen.html" class="text-white text-decoration-none me-3"><i class="fas fa-shopping-cart"></i> MUA HÀNG TRỰC TUYẾN</a>
+      <a href="../html/muatragop.html" class="text-white text-decoration-none me-3"><i class="fas fa-hourglass-half"></i> MUA TRẢ GÓP</a>
       <a href="#" class="text-white text-decoration-none"><i class="fas fa-percent"></i> KHUYẾN MÃI</a>
     </div>
   </nav>
@@ -114,6 +116,7 @@
       <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
         <h5>Thông tin</h5>
         <ul style="list-style: none; padding: 0;">
+          <li><a style="text-decoration: none;" href="../html/gioithieuchitiet.html">Giới thiệu chi tiết</a></li>
           <li>2 thành viên thành lập gồm:</a></li>
           <li>Nguyễn Đặng Nhật Duy - 23655571</li>
           <li>Lê Văn Dương - 23660591</li>
@@ -147,6 +150,8 @@
       <h5 style="margin-bottom: 10px;">Danh sách các ngân hàng thanh toán online</h5>
       <img src="../image/vnpay_banks.png" alt="Ngân hàng hỗ trợ" style="max-width: 100%; height: auto;">
     </div>
+    <div>
+    </div>
   </footer>
   
 
@@ -154,7 +159,7 @@
   <div class="modal fade" id="loginModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form>
+        <form id="loginForm">
           <div class="modal-header bg-primary text-white">
             <h5 class="modal-title">Đăng nhập</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
@@ -177,11 +182,12 @@
     </div>
   </div>
 
+
   <!-- Modal: Đăng ký -->
   <div class="modal fade" id="registerModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form>
+        <form id="registerForm">
           <div class="modal-header bg-primary text-white">
             <h5 class="modal-title">Đăng ký</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
@@ -207,6 +213,74 @@
       </div>
     </div>
   </div>
+
+  <!-- Script cho đăng ký đăng nhập -->
+  <script>
+ $(document).ready(function() {
+  // Xử lý đăng ký
+  $('#registerForm').on('submit', function(e) {
+    e.preventDefault();
+    const name = $('#regName').val();
+    const email = $('#regEmail').val();
+    const password = $('#regPassword').val();
+
+    if (name && email && password) {
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      const userExists = users.some(user => user.email === email);
+
+      if (userExists) {
+        alert('Email đã được sử dụng, vui lòng chọn email khác!');
+      } else {
+        users.push({ name, email, password });
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Đăng ký thành công!');
+        $('#registerModal').modal('hide');
+      }
+    } else {
+      alert('Vui lòng điền đầy đủ thông tin!');
+    }
+  });
+
+  // Xử lý đăng nhập
+  $('#loginForm').on('submit', function(e) {
+    e.preventDefault();
+    const email = $('#loginEmail').val();
+    const password = $('#loginPassword').val();
+
+    // Kiểm tra thông tin đăng nhập từ localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+      alert(`Đăng nhập thành công! Xin chào, ${user.name}`);
+      $('#loginModal').modal('hide');
+
+      // Ẩn nút Đăng nhập và Đăng ký, Hiển thị nút Đăng xuất
+      $('#loginLink').addClass('d-none');
+      $('#logoutLink').removeClass('d-none');
+      $('#registerLink').addClass('d-none'); // Ẩn nút Đăng ký
+
+      // Hiển thị tên người dùng với chữ "Xin chào"
+      $('#userName').text(`Xin chào, ${user.name}`).removeClass('d-none');
+    } else {
+      alert('Sai email hoặc mật khẩu!');
+    }
+  });
+
+  // Xử lý đăng xuất
+  $('#logoutLink').on('click', function() {
+    alert('Bạn đã đăng xuất!');
+
+    // Hiển thị lại nút Đăng nhập và Đăng ký, Ẩn nút Đăng xuất
+    $('#loginLink').removeClass('d-none');
+    $('#logoutLink').addClass('d-none');
+    $('#registerLink').removeClass('d-none'); // Hiển thị lại nút Đăng ký
+
+    // Ẩn tên người dùng khi đăng xuất
+    $('#userName').addClass('d-none').text('');
+  });
+});
+  </script>
 
   <script>
     const products = [
@@ -292,14 +366,6 @@
   
 
   <!-- Script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function logout() {
-      alert("Bạn đã đăng xuất!");
-      // Xử lý session ở đây nếu cần
-    }
-  </script>
-  
   <script>
     document.querySelectorAll('.dropdown-hover').forEach(dropdown => {
       dropdown.addEventListener('mouseover', () => {
@@ -310,5 +376,8 @@
       });
     });
   </script>
+
+  <!-- Nhúng auth.js kiểm tra đăng nhập -->
+<script src="../js/auth.js"></script>
 </body>
 </html>
