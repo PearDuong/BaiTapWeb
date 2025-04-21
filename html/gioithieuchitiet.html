@@ -174,73 +174,7 @@
       <img src="../image/vnpay_banks.png" alt="Ngân hàng hỗ trợ" style="max-width: 100%; height: auto;">
     </div>
   </footer>
-  <!-- Script cho đăng ký đăng nhập -->
-  <script>
-    $(document).ready(function() {
-     // Xử lý đăng ký
-     $('#registerForm').on('submit', function(e) {
-       e.preventDefault();
-       const name = $('#regName').val();
-       const email = $('#regEmail').val();
-       const password = $('#regPassword').val();
-   
-       if (name && email && password) {
-         const users = JSON.parse(localStorage.getItem('users')) || [];
-         const userExists = users.some(user => user.email === email);
-   
-         if (userExists) {
-           alert('Email đã được sử dụng, vui lòng chọn email khác!');
-         } else {
-           users.push({ name, email, password });
-           localStorage.setItem('users', JSON.stringify(users));
-           alert('Đăng ký thành công!');
-           $('#registerModal').modal('hide');
-         }
-       } else {
-         alert('Vui lòng điền đầy đủ thông tin!');
-       }
-     });
-   
-     // Xử lý đăng nhập
-     $('#loginForm').on('submit', function(e) {
-       e.preventDefault();
-       const email = $('#loginEmail').val();
-       const password = $('#loginPassword').val();
-   
-       // Kiểm tra thông tin đăng nhập từ localStorage
-       const users = JSON.parse(localStorage.getItem('users')) || [];
-       const user = users.find(u => u.email === email && u.password === password);
-   
-       if (user) {
-         alert(`Đăng nhập thành công! Xin chào, ${user.name}`);
-         $('#loginModal').modal('hide');
-   
-         // Ẩn nút Đăng nhập và Đăng ký, Hiển thị nút Đăng xuất
-         $('#loginLink').addClass('d-none');
-         $('#logoutLink').removeClass('d-none');
-         $('#registerLink').addClass('d-none'); // Ẩn nút Đăng ký
-   
-         // Hiển thị tên người dùng với chữ "Xin chào"
-         $('#userName').text(`Xin chào, ${user.name}`).removeClass('d-none');
-       } else {
-         alert('Sai email hoặc mật khẩu!');
-       }
-     });
-   
-     // Xử lý đăng xuất
-     $('#logoutLink').on('click', function() {
-       alert('Bạn đã đăng xuất!');
-   
-       // Hiển thị lại nút Đăng nhập và Đăng ký, Ẩn nút Đăng xuất
-       $('#loginLink').removeClass('d-none');
-       $('#logoutLink').addClass('d-none');
-       $('#registerLink').removeClass('d-none'); // Hiển thị lại nút Đăng ký
-   
-       // Ẩn tên người dùng khi đăng xuất
-       $('#userName').addClass('d-none').text('');
-     });
-   });
-     </script>
+
    <!-- Nhúng auth.js kiểm tra đăng nhập -->
 <script src="../js/auth.js"></script>
 </body>
