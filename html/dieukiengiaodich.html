@@ -47,18 +47,18 @@
       </div>
     </div>
     <div class="cart d-flex align-items-center">
-        <div class="me-4 position-relative">
-            <i class="fas fa-heart fs-4 text-primary"></i>
-            <span id="favoriteCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
-          </div>
+      <div class="me-4 position-relative">
+        <a href="../html/yeuthich.html"><i class="fas fa-heart fs-4 text-primary"></i></a>
           
-      <div class="position-relative d-flex align-items-center border rounded-pill px-3 py-2">
-        <i class="fas fa-shopping-cart me-2 text-primary"></i>
+          <span id="favoriteCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+        </div>
+        
+    <div class="position-relative d-flex align-items-center border rounded-pill px-3 py-2">
+      <a style="text-decoration: none;" href="../html/giohang.html"><i class="fas fa-shopping-cart me-2 text-primary"></i>
         <span>Tổng cộng: 0 ₫</span>
-        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
-
-      </div>
+        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span></a>
     </div>
+  </div>
   </div>
 
   <!-- Menu -->
@@ -172,5 +172,16 @@
 
    <!-- Nhúng auth.js kiểm tra đăng nhập -->
 <script src="../js/auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.dropdown-hover').forEach(dropdown => {
+      dropdown.addEventListener('mouseover', () => {
+        dropdown.querySelector('.dropdown-menu').classList.add('show');
+      });
+      dropdown.addEventListener('mouseout', () => {
+        dropdown.querySelector('.dropdown-menu').classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html>

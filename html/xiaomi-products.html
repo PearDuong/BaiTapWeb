@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechWorld - Trang chủ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Topnav -->
+  <div class="bg-primary text-white py-2 px-3 d-flex justify-content-between align-items-center topnav">
+    <div>
+      <a href="#" id="loginLink" class="text-white text-decoration-none me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="fas fa-user"></i> ĐĂNG NHẬP
+      </a>
+      <a href="#" id="logoutLink" class="text-white text-decoration-none me-3 d-none">
+        <i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT
+      </a>
+      <a href="#" id="registerLink" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+        <i class="fas fa-user-plus"></i> ĐĂNG KÝ
+      </a>
+      <span id="userName" class="text-white text-decoration-none d-none"></span>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-wordpress"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-vk"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-spotify"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="container py-4 d-flex justify-content-between align-items-center header">
+    <div class="logo">
+        <a href="../html/home.html"><img src="../image/logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
+    </div>
+    <div class="search-bar w-50">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Tìm sản phẩm...">
+        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <div class="cart d-flex align-items-center">
+        <div class="me-4 position-relative">
+          <a href="../html/yeuthich.html"><i class="fas fa-heart fs-4 text-primary"></i></a>
+            
+            <span id="favoriteCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+          </div>
+          
+      <div class="position-relative d-flex align-items-center border rounded-pill px-3 py-2">
+        <a style="text-decoration: none;" href="../html/giohang.html"><i class="fas fa-shopping-cart me-2 text-primary"></i>
+          <span>Tổng cộng: 0 ₫</span>
+          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <nav class="bg-primary py-2">
+    <div class="container d-flex flex-wrap justify-content-between text-white">
+        <div class="dropdown dropdown-hover me-3">
+            <a class="dropdown-toggle text-white text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-list"></i> DANH MỤC SẢN PHẨM
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../html/samsung-products.html">Samsung</a></li>
+              <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+              <li><a class="dropdown-item" href="#">Oppo</a></li>
+              <li><a class="dropdown-item" href="#">Vivo</a></li>
+              <li><a class="dropdown-item" href="#">iPhone</a></li>
+              <li><a class="dropdown-item" href="#">Realme</a></li>
+              <li><a class="dropdown-item" href="#">Nokia</a></li>
+            </ul>
+          </div>
+                   
+      <a href="../html/tintuc.html" class="text-white text-decoration-none me-3"><i class="fas fa-newspaper"></i> TIN TỨC</a>
+      <a href="../html/muahangtructuyen.html" class="text-white text-decoration-none me-3"><i class="fas fa-shopping-cart"></i> MUA HÀNG TRỰC TUYẾN</a>
+      <a href="../html/muatragop.html" class="text-white text-decoration-none me-3"><i class="fas fa-hourglass-half"></i> MUA TRẢ GÓP</a>
+      <a href="#" class="text-white text-decoration-none"><i class="fas fa-percent"></i> KHUYẾN MÃI</a>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row" id="productList">
+      <!-- Sản phẩm sẽ được thêm ở đây bằng JS -->
+    </div>
+  </div>
+  
+
+  <!-- footer -->
+  <footer style="background-color: #f5f5f5; padding: 40px 20px; font-family: Arial, sans-serif;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+      
+      <!-- Chính sách mua hàng -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Chính sách mua hàng</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li><a style="text-decoration: none;" href="../html/dieukiengiaodich.html">Điều kiện giao dịch chung</a></li>
+          <li><a style="text-decoration: none;" href="../html/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+          <li><a style="text-decoration: none;" href="../html/csdoitra.html">Chính sách đổi trả</a></li>
+          <li><a style="text-decoration: none;" href="../html/csthanhtoan.html">Chính sách thanh toán</a></li>
+        </ul>
+      </div>
+  
+      <!-- Thông tin -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Thông tin</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li><a style="text-decoration: none;" href="../html/gioithieuchitiet.html">Giới thiệu chi tiết</a></li>
+          <li>2 thành viên thành lập gồm:</a></li>
+          <li>Nguyễn Đặng Nhật Duy - 23655571</li>
+          <li>Lê Văn Dương - 23660591</li>
+        </ul>
+      </div>
+  
+      <!-- Email liên hệ -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Email liên hệ</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>Hỗ trợ khách hàng: <a href="mailto:cskh@techword.vn">cskh@techword.vn</a></li>
+          <li>Báo giá: <a href="mailto:baogia@techword.vn">baogia@techword.vn</a></li>
+          <li>Hợp tác: <a href="mailto:hoptac@techword.vn">hoptac@techword.vn</a></li>
+        </ul>
+      </div>
+  
+      <!-- Địa chỉ liên hệ -->
+      <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+        <h5>Địa chỉ liên hệ</h5>
+        <ul style="list-style: none; padding: 0;">
+          <li>Địa chỉ:Nguyễn Văn Bảo,Q.Gò Vấp</li>
+          <li>Điện thoại: <a href="tel:+84901234567">0905243717</a></li>
+          <li>Giờ làm việc: Thứ 2 đến Thứ 6</li>
+          <li>Gọi mua hàng miễn phí:<a href="#">1800 1234</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Hàng ngang hiển thị hình ảnh ngân hàng -->
+    <div style="text-align: center; border-top: 1px solid #ddd; padding-top: 20px; margin-top: 20px;">
+      <h5 style="margin-bottom: 10px;">Danh sách các ngân hàng thanh toán online</h5>
+      <img src="../image/vnpay_banks.png" alt="Ngân hàng hỗ trợ" style="max-width: 100%; height: auto;">
+    </div>
+    <div>
+    </div>
+  </footer>
+  
+
+  <!-- Modal: Đăng nhập -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="loginForm">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Đăng nhập</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" id="loginEmail" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Mật khẩu</label>
+              <input type="password" id="loginPassword" class="form-control" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary w-100" type="submit">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal: Đăng ký -->
+  <div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="registerForm">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Đăng ký</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="regName" class="form-label">Họ tên</label>
+              <input type="text" id="regName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="regEmail" class="form-label">Email</label>
+              <input type="email" id="regEmail" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="regPassword" class="form-label">Mật khẩu</label>
+              <input type="password" id="regPassword" class="form-control" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary w-100" type="submit">Đăng ký</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const products = [
+    ];
+  
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    function renderProducts() {
+      const container = document.getElementById("productList");
+      container.innerHTML = "";
+      products.forEach(product => {
+        const isFav = favorites.includes(product.id);
+        container.innerHTML += `
+          <div class="col-md-4 mb-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text text-danger fw-bold">${product.price.toLocaleString()} ₫</p>
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-outline-danger" onclick="toggleFavorite(${product.id})">
+                    <i class="fas fa-heart${isFav ? '' : '-o'}"></i> ${isFav ? 'Đã yêu thích' : 'Yêu thích'}
+                  </button>
+                  <button class="btn btn-primary" onclick="addToCart(${product.id})">
+                    <i class="fas fa-shopping-cart"></i> Thêm giỏ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+  
+    function toggleFavorite(productId) {
+  const index = favorites.indexOf(productId);
+  if (index > -1) {
+    favorites.splice(index, 1);
+  } else {
+    favorites.push(productId);
+  }
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+  renderProducts();
+  updateFavoriteIcon();
+}
+
+  
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const existing = cart.find(p => p.id === productId);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ ...product, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartIcon();
+      alert("Đã thêm vào giỏ hàng!");
+    }
+  
+    function updateCartIcon() {
+  const cartCount = cart.reduce((total, p) => total + p.quantity, 0);
+  const cartTotal = cart.reduce((total, p) => total + p.price * p.quantity, 0);
+  document.querySelector(".cart span:nth-child(2)").innerText = `Tổng cộng: ${cartTotal.toLocaleString()} ₫`;
+  document.getElementById("cartCount").innerText = cartCount;
+}
+
+
+    function updateFavoriteIcon() {
+  document.getElementById("favoriteCount").innerText = favorites.length;
+}
+
+  
+    // Load lúc đầu
+    renderProducts();
+    updateCartIcon();
+    updateFavoriteIcon();
+
+  </script>
+  
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.dropdown-hover').forEach(dropdown => {
+      dropdown.addEventListener('mouseover', () => {
+        dropdown.querySelector('.dropdown-menu').classList.add('show');
+      });
+      dropdown.addEventListener('mouseout', () => {
+        dropdown.querySelector('.dropdown-menu').classList.remove('show');
+      });
+    });
+  </script>
+
+  <!-- Nhúng auth.js kiểm tra đăng nhập -->
+<script src="../js/auth.js"></script>
+
+</body>
+</html>
