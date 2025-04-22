@@ -107,7 +107,7 @@ body {
 /* Nút điều hướng */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ cho nút điều hướng */
+  background-color:  rgba(0, 0, 0, 5); /* Nền mờ cho nút điều hướng */
   border-radius: 50%; /* Bo tròn nút */
 }
 
