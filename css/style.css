@@ -41,7 +41,76 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
+ /* Container chính của banner */
+ #bannerContainer {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng */
+  border-radius: 25px; /* Bo góc cho hộp */
+  background-color: white; /* Màu nền hộp */
+  padding: 10px; /* Khoảng cách bên trong hộp */
+  width: 50%; /* Chiều ngang giảm xuống còn 75% */
+  margin: 20px auto; /* Căn giữa banner */
+}
+
+/* Container chính của carousel */
+#bannerCarousel {
+  position: relative; /* Để định vị các thành phần bên trong */
+}
+
+/* Khung banner cố định */
+.fixed-banner {
+  width: 100%; /* Chiều rộng khung */
+  height: 400px; /* Chiều cao cố định cho khung */
+  overflow: hidden; /* Cắt bỏ phần ảnh thừa */
+  border-radius: 20px; /* Bo góc cho khung */
+  position: relative;
+}
+
+/* Ảnh trong carousel */
+.carousel-inner img {
+  display: block; /* Đảm bảo ảnh không có khoảng trắng xung quanh */
+  width: 1200px; /* Chiều rộng cố định */
+  height: 400px; /* Chiều cao cố định */
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung và không bị méo */
+  position: absolute; /* Giúp căn chỉnh chính xác */
+  top: 0;
+  left: 0;
+}
+
+/* Thanh chọn (indicators) */
+.carousel-indicators {
+  position: absolute;
+  bottom: -20px; /* Đặt thanh chọn cách dưới banner */
+  left: 50%; /* Căn giữa thanh chọn */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center; /* Các nút cách đều nhau */
+  gap: 15px; /* Khoảng cách giữa các nút */
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền của nút chọn */
+  border: none;
+  border-radius: 50%; /* Hình dạng nút tròn */
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff; /* Màu xanh khi được chọn */
+}
+
+.carousel-indicators button:hover {
+  background-color: #0056b3; /* Màu xanh đậm khi hover */
+}
+
+/* Nút điều hướng */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Nền mờ cho nút điều hướng */
+  border-radius: 50%; /* Bo tròn nút */
+}
+
   main {
     flex: 1;
   }
@@ -51,4 +120,3 @@ body {
     padding: 40px 20px;
     font-family: Arial, sans-serif;
   }
-  
