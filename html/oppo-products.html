@@ -82,7 +82,7 @@
       <a href="../html/tintuc.html" class="text-white text-decoration-none me-3"><i class="fas fa-newspaper"></i> TIN TỨC</a>
       <a href="../html/muahangtructuyen.html" class="text-white text-decoration-none me-3"><i class="fas fa-shopping-cart"></i> MUA HÀNG TRỰC TUYẾN</a>
       <a href="../html/muatragop.html" class="text-white text-decoration-none me-3"><i class="fas fa-hourglass-half"></i> MUA TRẢ GÓP</a>
-      <a href="#" class="text-white text-decoration-none"><i class="fas fa-percent"></i> KHUYẾN MÃI</a>
+      <a href="../html/khuyenmai.html" class="text-white text-decoration-none"><i class="fas fa-percent"></i> KHUYẾN MÃI</a>
     </div>
   </nav>
 
@@ -180,37 +180,48 @@
     </div>
   </div>
 
-
-  <!-- Modal: Đăng ký -->
-  <div class="modal fade" id="registerModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <form id="registerForm">
-          <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title">Đăng ký</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+<!-- Modal: Đăng ký -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form id="registerForm">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Đăng ký</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="regName" class="form-label">
+              Họ tên <span class="text-danger">*</span>
+            </label>
+            <input type="text" id="regName" class="form-control" required>
           </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="regName" class="form-label">Họ tên</label>
-              <input type="text" id="regName" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label for="regEmail" class="form-label">Email</label>
-              <input type="email" id="regEmail" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label for="regPassword" class="form-label">Mật khẩu</label>
-              <input type="password" id="regPassword" class="form-control" required>
-            </div>
+          <div class="mb-3">
+            <label for="regEmail" class="form-label">
+              Email <span class="text-danger">*</span>
+            </label>
+            <input type="text" id="regEmail" class="form-control" required>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary w-100" type="submit">Đăng ký</button>
+          <div class="mb-3">
+            <label for="regPassword" class="form-label">
+              Mật khẩu <span class="text-danger">*</span>
+            </label>
+            <input type="password" id="regPassword" class="form-control" required>
           </div>
-        </form>
-      </div>
+          <div class="mb-3">
+            <label for="regConfirmPassword" class="form-label">
+              Nhập lại mật khẩu <span class="text-danger">*</span>
+            </label>
+            <input type="password" id="regConfirmPassword" class="form-control" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary w-100" type="submit">Đăng ký</button>
+        </div>
+      </form>
     </div>
   </div>
+</div>
 
   <script>
     const products = [
