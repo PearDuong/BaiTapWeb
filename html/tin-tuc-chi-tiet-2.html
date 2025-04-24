@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết tin tức | Google triển khai AI Bard</title>
+<<<<<<< HEAD
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+=======
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 0ac2ae7190afdcd180d7cc4ad24f18b90b3c4e0d
+</head>
+<body>
+  
+    <!-- Navbar -->
+   <!-- Topnav -->
+   <div class="bg-primary text-white py-2 px-3 d-flex justify-content-between align-items-center topnav">
+    <div>
+      <a href="#" id="loginLink" class="text-white text-decoration-none me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <i class="fas fa-user"></i> ĐĂNG NHẬP
+      </a>
+      <a href="#" id="logoutLink" class="text-white text-decoration-none me-3 d-none">
+        <i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT
+      </a>
+      <a href="#" id="registerLink" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+        <i class="fas fa-user-plus"></i> ĐĂNG KÝ
+      </a>
+      <span id="userName" class="text-white text-decoration-none d-none"></span>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-wordpress"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-vk"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-spotify"></i></a>
+    </div>
+  </div>
+  
+    <!-- Header -->
+    <div class="container py-4 d-flex justify-content-between align-items-center header">
+      <div class="logo">
+          <a href="home.html"><img src="../image/logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
+      </div>
+      <div class="search-bar w-50">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Tìm sản phẩm...">
+          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="cart d-flex align-items-center">
+        <div class="me-4 position-relative">
+          <a href="../html/yeuthich.html"><i class="fas fa-heart fs-4 text-primary"></i></a>
+            
+            <span id="favoriteCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">1</span>
+          </div>
+          
+      <div class="position-relative d-flex align-items-center border rounded-pill px-3 py-2">
+        <a style="text-decoration: none;" href="../html/giohang.html"><i class="fas fa-shopping-cart me-2 text-primary"></i>
+          <span>Giỏ hàng</span>
+          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">1</span></a>
+      </div>
+    </div>
+    </div>
+  
+    <!-- Menu -->
+    <nav class="bg-primary py-2">
+      <div class="container d-flex flex-wrap justify-content-between text-white">
+          <div class="dropdown dropdown-hover me-3">
+              <a class="dropdown-toggle text-white text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-list"></i> DANH MỤC SẢN PHẨM
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../html/samsung-products.html">Samsung</a></li>
+                <li><a class="dropdown-item" href="../html/xiaomi-products.html">Xiaomi</a></li>
+                <li><a class="dropdown-item" href="../html/oppo-products.html">Oppo</a></li>
+                <li><a class="dropdown-item" href="../html/iphone-products.html">iPhone</a></li>
+                <li><a class="dropdown-item" href="../html/huawei-products.html">Huawei</a></li>
+              </ul>
+            </div>
+                     
+        <a href="../html/tintuc.html" class="text-white text-decoration-none me-3"><i class="fas fa-newspaper"></i> TIN TỨC</a>
+        <a href="../html/muahangtructuyen.html" class="text-white text-decoration-none me-3"><i class="fas fa-shopping-cart"></i> MUA HÀNG TRỰC TUYẾN</a>
+        <a href="../html/muatragop.html" class="text-white text-decoration-none me-3"><i class="fas fa-hourglass-half"></i> MUA TRẢ GÓP</a>
+        <a href="#" class="text-white text-decoration-none"><i class="fas fa-percent"></i> KHUYẾN MÃI</a>
+      </div>
+    </nav>
+  
+      <!-- nội dung -->
+      <div class="container py-5">
+        <h1 class="text-primary">Google triển khai AI Bard cạnh tranh với ChatGPT</h1>
+          
+          <div>
+        <img style="width: 70%;;margin-left: 160px; margin-top: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 3);" src="../image/bard-ai.png" alt="Bard-AI">
+        <figcaption style="color: gray;text-align: center;margin-bottom: 20px;" >Bard-AI được google nghiên cứu và phát triển</figcaption>
+      </div>
+        <p>Google vừa chính thức triển khai Bard - trí tuệ nhân tạo ngôn ngữ mới nhất, nhằm cạnh tranh trực tiếp với ChatGPT của OpenAI. Bard được tích hợp trong các sản phẩm như Google Search, Gmail, và Google Docs, hỗ trợ người dùng tạo nội dung, tìm kiếm thông tin, và tự động hóa công việc.</p>
+        <p>Với khả năng học sâu và xử lý ngôn ngữ tự nhiên vượt trội, Bard hứa hẹn sẽ mang đến trải nghiệm cá nhân hóa và hiệu quả hơn cho người dùng trên toàn thế giới.</p>
+        <h3 class="text-primary">Tính năng nổi bật của Google Bard</h3>
+        <p>Trước khi biết được cách sử dụng Google Bard AI tạo ảnh chuyên nghiệp nhanh chóng. Hãy cũng Sforum khám phá những tính năng mà nền tảng này mang đến cho người dùng qua thông tin bên dưới:</p>
+        <li>Khả năng tìm kiếm thông tin: Google Bard thực hiện tìm kiếm thông tin trên web. Sau đó, đưa ra được kết quả một cách hoàn thiện nhất.</li>
+        <li>Dịch ngôn ngữ: Nền tảng này có thể dịch được hơn 100 ngôn ngữ khác nhau.</li>
+        <li>Viết các loại nội dung sáng tạo: Thực hiện viết nội dung sáng tạo như kịch bản, email, mã lập trình,...</li>
+        <li>Dự đoán, phân tích dữ liệu: đưa ra các giải pháp và phân tích dữ liệu một cách chuẩn xác. Có khả năng dự đoán kết quả trong nhiều công việc và ngành nghề khác nhau.</li>
+        <div>
+        <img style="width: 70%;;margin-left: 160px; margin-top: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 3);" src="../image/bard-2.png" alt="Bard-AI">
+        <figcaption style="color: gray;text-align: center;margin-bottom: 20px;" >Bard-AI được google nghiên cứu và phát triển</figcaption>
+      </div>
+        <p>Trên đây là các thông tin về cách sử dụng Google Bard AI để tạo hình ảnh và tìm kiếm thông tin tiếng Việt hữu ích nhất trên điện thoại, máy tính. Bài viết giúp bạn biết được cụ thể cách đăng ký tạo tài khoản Google Bard AI nhanh chóng và những thông tin về tính năng nổi bật của ứng dụng.</p>
+
+        <a href="../html/tintuc.html" class="btn btn-primary mt-3">Quay lại danh sách tin tức</a>
+      </div>
+  
+ <!-- Modal: Đăng ký -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form id="registerForm">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Đăng ký</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="regName" class="form-label">
+              Họ tên <span class="text-danger">*</span>
+            </label>
+            <input type="text" id="regName" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="regEmail" class="form-label">
+              Email <span class="text-danger">*</span>
+            </label>
+            <input type="text" id="regEmail" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="regPassword" class="form-label">
+              Mật khẩu <span class="text-danger">*</span>
+            </label>
+            <input type="password" id="regPassword" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="regConfirmPassword" class="form-label">
+              Nhập lại mật khẩu <span class="text-danger">*</span>
+            </label>
+            <input type="password" id="regConfirmPassword" class="form-control" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary w-100" type="submit">Đăng ký</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal: Đăng nhập -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="loginForm">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Đăng nhập</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="text" id="loginEmail" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Mật khẩu</label>
+              <input type="password" id="loginPassword" class="form-control" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary w-100" type="submit">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- footer -->
+    <footer style="background-color: #f5f5f5; padding: 40px 20px; font-family: Arial, sans-serif;">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Chính sách mua hàng -->
+        <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+          <h5>Chính sách mua hàng</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li><a style="text-decoration: none;" href="../html/dieukiengiaodich.html">Điều kiện giao dịch chung</a></li>
+            <li><a style="text-decoration: none;" href="../html/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+            <li><a style="text-decoration: none;" href="../html/csdoitra.html">Chính sách đổi trả</a></li>
+            <li><a style="text-decoration: none;" href="../html/csthanhtoan.html">Chính sách thanh toán</a></li>
+          </ul>
+        </div>
+    
+        <!-- Thông tin -->
+        <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+          <h5>Thông tin</h5>
+          <ul style="list-style: none; padding: 0;">
+              <ul style="list-style: none; padding: 0;">
+                <li><a style="text-decoration: none;" href="../html/gioithieuchitiet.html">Giới thiệu chi tiết</a></li>
+                  <li>2 thành viên thành lập gồm:</a></li>
+                  <li>Nguyễn Đặng Nhật Duy - 23655571</li>
+                  <li>Lê Văn Dương - 23660591</li>
+                </ul>
+          </ul>
+        </div>
+    
+        <!-- Email liên hệ -->
+        <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+          <h5>Email liên hệ</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li>Hỗ trợ khách hàng: <a href="mailto:cskh@techword.vn">cskh@techword.vn</a></li>
+            <li>Báo giá: <a href="mailto:baogia@techword.vn">baogia@techword.vn</a></li>
+            <li>Hợp tác: <a href="mailto:hoptac@techword.vn">hoptac@techword.vn</a></li>
+          </ul>
+        </div>
+    
+        <!-- Địa chỉ liên hệ -->
+        <div style="flex: 1 1 22%; margin-bottom: 20px; min-width: 250px;">
+          <h5>Địa chỉ liên hệ</h5>
+          <ul style="list-style: none; padding: 0;">
+            <li>Địa chỉ: Nguyễn Văn Bảo,Q.Gò Vấp</li>
+            <li>Điện thoại: <a href="tel:+84901234567">0905243717</a></li>
+            <li>Giờ làm việc: Thứ 2 đến Thứ 6</li>
+            <li>Gọi mua hàng miễn phí:<a href="#">1800 1234</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Hàng ngang hiển thị hình ảnh ngân hàng -->
+      <div style="text-align: center; border-top: 1px solid #ddd; padding-top: 20px; margin-top: 20px;">
+        <h5 style="margin-bottom: 10px;">Danh sách các ngân hàng thanh toán online</h5>
+        <img src="../image/vnpay_banks.png" alt="Ngân hàng hỗ trợ" style="max-width: 100%; height: auto;">
+      </div>
+    </footer>
+
+
+      <!-- Nhúng auth.js kiểm tra đăng nhập -->
+<script src="../js/auth.js"></script>
+  <script>
+    document.querySelectorAll('.dropdown-hover').forEach(dropdown => {
+      dropdown.addEventListener('mouseover', () => {
+        dropdown.querySelector('.dropdown-menu').classList.add('show');
+      });
+      dropdown.addEventListener('mouseout', () => {
+        dropdown.querySelector('.dropdown-menu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>

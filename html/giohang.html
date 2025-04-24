@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TechWorld - Trang chủ</title>
+  <title>Sản phẩm yêu thích</title>
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <script src="../js/jquery-3.7.1.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    .table img {
+      width: 80px;
+      height: auto;
+    }
+    .quantity-btn {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
 
+    
   <!-- Topnav -->
   <div class="bg-primary text-white py-2 px-3 d-flex justify-content-between align-items-center topnav">
     <div>
@@ -40,7 +52,7 @@
   <!-- Header -->
   <div class="container py-4 d-flex justify-content-between align-items-center header">
     <div class="logo">
-        <a href="#"><img src="../image/logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
+        <a href="home.html"><img src="../image/logo.png" alt="TechWorld Logo" style="height: 80px;"></a>
     </div>
     <div class="search-bar w-50">
       <div class="input-group">
@@ -56,7 +68,7 @@
           </div>
           
       <div class="position-relative d-flex align-items-center border rounded-pill px-3 py-2">
-        <a style="text-decoration: none;" href="../html/giohang.html"><i class="fas fa-shopping-cart me-2 text-primary"></i>
+        <a style="text-decoration: none;" href="#"><i class="fas fa-shopping-cart me-2 text-primary"></i>
           <span>Giỏ hàng</span>
           <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">1</span></a>
       </div>
@@ -86,101 +98,57 @@
     </div>
   </nav>
 
-<!-- Banner -->
-<div id="bannerContainer" style="box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); border-radius: 25px; background-color: white; padding: 10px; width: 75%; margin: 20px auto;">
-  <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <!-- Banner chính -->
-    <div class="carousel-inner fixed-banner">
-      <div class="carousel-item active">
-        <img src="../image/banner1.jpg" class="d-block banner-img" alt="Banner 1" style="height: 400px;width: 1300px;">
-      </div>
-      <div class="carousel-item">
-        <img src="../image/banner2.png" class="d-block banner-img" alt="Banner 2" style="height: 400px;width: 1300px;">
-      </div>
-      <div class="carousel-item">
-        <img src="../image/banner3.jpg" class="d-block banner-img" alt="Banner 3" style="height: 400px;width: 1300px;">
-      </div>
-    </div>
   
-    <!-- Nút điều hướng trái/phải -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #0d6efd;"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #0d6efd;"></span>
-      <span class="visually-hidden" >Next</span>
-    </button>
-  
-    <!-- Thanh chọn phía dưới -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #0d6efd;"></button>
-      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #0d6efd;"></button>
-      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #0d6efd;"></button>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Giỏ hàng của bạn</h2>
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>STT</th>
+          <th>Hình ảnh</th>
+          <th>Tên sản phẩm</th>
+          <th>Đơn giá</th>
+          <th>Số lượng</th>
+          <th>Thành tiền</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body">
+        <tr>
+          <td>1</td>
+          <td><img src="../image/ip15prm.jpg" alt="Sản phẩm mẫu"></td>
+          <td>Điện thoại iPhone 15 Pro Max</td>
+          <td>31.080.000₫</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="btn btn-outline-secondary quantity-btn">-</button>
+              <span class="mx-2">1</span>
+              <button class="btn btn-outline-secondary quantity-btn">+</button>
+            </div>
+          </td>
+          <td>31.080.000₫</td>
+          <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Xoá</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5" class="text-end">Tổng tiền:</th>
+          <th id="cart-total">31.080.000₫</th>
+          <th></th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Button thanh toán -->
+    <div class="text-end">
+      <button class="btn btn-success" id="btn-checkout">Thanh toán</button>
     </div>
   </div>
-</div>
-
-  <div style="background-color: #0d6efd; padding-top: 10px; margin-left: 250px; margin-right: 250px; border-radius: 20px;">
-    <h3 style="color: white; text-align: left; padding-bottom: 10px; margin-left: 50px;">Sản phẩm bán chạy</h3>
-  </div>
-
-  <div class="container py-4">
-    <div class="row" id="productList">
-      <!-- Sản phẩm sẽ được thêm ở đây bằng JS -->
-    </div>
-  </div>
-
-  <div style="background-color: #0d6efd; padding-top: 10px; margin-left: 250px; margin-right: 250px; border-radius: 20px;">
-    <h3 style="color: white; text-align: left; padding-bottom: 10px; margin-left: 50px;">Đánh giá gần đây của khách hàng</h3>
-  </div>
-
-    <div class="container py-4">
-      <div class="row" id="rating">
-        <div class="wrapper">
-
-          <div class="box">
-            <h3>Đường Tăng</h3>
-              <p>Đi thỉnh kinh tiện ghé qua shop mua 1 cái điện thoại, chất lượng khỏi phải bàn.</p>
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </div>
-          </div>
-
-          <div class="box">
-            <h3>Long Vương</h3>
-            <p>Nghe Ngộ Không giới thiệu website này, điện thoại chống nước tốt lắm nha cả nhà.</p>
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-          </div>
-
-          <div class="box">
-            <h3>Ngọc Hoàng</h3>
-            <p>Điện thoại chất lượng, ở thiên đình cũng bắt được sóng.</p>
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-              </div>
-          </div>
-
-      </div>
-      </div>
-    </div>
-  
-  <!-- footer -->
-  <footer style="background-color: #f5f5f5; padding: 40px 20px; font-family: Arial, sans-serif;">
+   <!-- footer -->
+   <footer style="background-color: #f5f5f5; padding: 40px 20px; font-family: Arial, sans-serif;">
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
       
       <!-- Chính sách mua hàng -->
@@ -265,7 +233,7 @@
   </div>
 
 
-<!-- Modal: Đăng ký -->
+  <!-- Modal: Đăng ký -->
 <div class="modal fade" id="registerModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -307,81 +275,19 @@
     </div>
   </div>
 </div>
+ <!-- Script -->
+ <script>
+   document.querySelectorAll('.dropdown-hover').forEach(dropdown => {
+     dropdown.addEventListener('mouseover', () => {
+       dropdown.querySelector('.dropdown-menu').classList.add('show');
+     });
+     dropdown.addEventListener('mouseout', () => {
+       dropdown.querySelector('.dropdown-menu').classList.remove('show');
+     });
+   });
+ </script>
 
-  <script>
-    const products = [
-  { id: 1, name: "Samsung Galaxy A34", price: 5990000, image: "a34.jpg", link: "../html/a34.html" },
-  { id: 2, name: "iPhone 13 Pro Max", price: 21990000, image: "ip13prm.jpg", link: "../html/ip13prm.html"},
-  { id: 3, name: "Xiaomi Redmi Note 12", price: 4990000, image: "redminote12.jpg", link: "../html/note12.html"},
-  { id: 4, name: "Oppo A53", price: 3900000, image: "a53.jpg", link: "../html/a53.html"},
-  {id: 5, name: "Huawei P30 Lite", price: 7890000, image: "p30lite.jpg", link: "../html/p30lite.html"},
-  {id: 6, name: "Samsung Galaxy S25 Ultra", price: 33500000, image: "s25ultra.jpg", link: "../html/s25ultra.html"}
-];
-
-  
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
-    function renderProducts() {
-      const container = document.getElementById("productList");
-      container.innerHTML = "";
-      products.forEach(product => {
-        const isFav = favorites.includes(product.id);
-        container.innerHTML += `
-  <div class="col-md-4 mb-4">
-    <div class="card shadow h-100">
-      <a href="${product.link}"><img src="../image/${product.image}" class="card-img-top" alt="${product.name}" style="height: 500px; object-fit: cover;"></a>
-      <div class="card-body d-flex flex-column justify-content-between">
-        <h5 class="card-title">${product.name}</h5>
-        <p class="card-text text-danger fw-bold">${product.price.toLocaleString()} ₫</p>
-        <div class="d-flex justify-content-between mt-auto">
-          <button class="btn btn-outline-danger" onclick="toggleFavorite(${product.id})">
-            <i class="fas fa-heart${isFav ? '' : '-o'}"></i> ${isFav ? 'Đã yêu thích' : 'Yêu thích'}
-          </button>
-          <button class="btn btn-primary" onclick="addToCart(${product.id})">
-            <i class="fas fa-shopping-cart"></i> Thêm giỏ
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-`;
-      });
-    }
-    
-  
-    function toggleFavorite(productId) {
-  const index = favorites.indexOf(productId);
-  if (index > -1) {
-    favorites.splice(index, 1);
-  } else {
-    favorites.push(productId);
-  }
-  localStorage.setItem('favorites', JSON.stringify(favorites));
-  renderProducts();
-  updateFavoriteIcon();
-}
-
-    // Load lúc đầu
-    renderProducts();
-
-  </script>
-  
-
-  <!-- Script -->
-  <script>
-    document.querySelectorAll('.dropdown-hover').forEach(dropdown => {
-      dropdown.addEventListener('mouseover', () => {
-        dropdown.querySelector('.dropdown-menu').classList.add('show');
-      });
-      dropdown.addEventListener('mouseout', () => {
-        dropdown.querySelector('.dropdown-menu').classList.remove('show');
-      });
-    });
-  </script>
-
-  <!-- Nhúng auth.js kiểm tra đăng nhập -->
+ <!-- Nhúng auth.js kiểm tra đăng nhập -->
 <script src="../js/auth.js"></script>
-
 </body>
 </html>
