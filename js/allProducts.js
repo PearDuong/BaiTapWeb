@@ -1,0 +1,20 @@
+const allProducts = [
+    {id: 1, name: "Samsung Galaxy A34", price: 5990000, image: "a34.jpg", link: "../html/a34.html" },
+    {id: 6, name: "Samsung Galaxy S25 Ultra", price: 33500000, image: "s25ultra.jpg", link: "../html/s25ultra.html"},
+    {id: 7, name: "Samsung Galaxy A55", price: 8300000, image: "a55.jpg", link: "../html/a55.html"},
+    {id: 8, name: "Samsung Galaxy Z Fold 6", price: 39900000, image: "zfold6.jpg", link: "../html/zfold6.html"},
+    {id: 9, name: "Samsung Galaxy Z Flip", price: 27890000, image: "zflip.jpg", link: "../html/zflip.html"},
+    {id: 10, name: "Samsung Galaxy A06", price: 3990000, image: "a06.jpg", link: "../html/a06.html"},
+    {id: 3, name: "Xiaomi Redmi Note 12", price: 4990000, image: "redminote12.jpg", link: "../html/note12.html"},
+    {id: 11, name: "Xiaomi Redmi K70 Pro", price: 21000000, image: "k70p.jpg", link: "../html/k70pro.html"},
+    {id: 12, name: "Xiaomi Redmi K80 5G", price: 32000000, image: "k805g.jpg", link: "../html/k805g.html"},
+    { id: 4, name: "Oppo A53", price: 3900000, image: "a53.jpg", link: "../html/a53.html"},
+    {id: 13, name: "Oppo Reno 8 5G", price: 27080000, image: "reno85g.jpg", link: "../html/reno85g.html"},
+    {id: 14, name: "Oppo Find N5", price: 12000000, image: "findn5.jpg", link: "../html/findn5.html"},
+    { id: 2, name: "iPhone 13 Pro Max", price: 21990000, image: "ip13prm.jpg", link: "../html/ip13prm.html" },
+    {id: 15, name: "iPhont 15 Pro Max", price: 31080000, image: "ip15prm.jpg", link: "../html/ip15prm.html"},
+    {id: 16, name: "iPhone Xs Max", price: 9000000, image: "xsmax.jpg", link: "../html/ipxsm.html"},
+    {id: 5, name: "Huawei P30 Lite", price: 7890000, image: "p30lite.jpg", link: "../html/p30lite.html"},
+    {id: 17, name: "Huawei Mate Xs 2", price: 39990000, image: "mate2.jpg", link: "../html/matexs2.html"},
+    {id: 18, name: "Huawei P50 Pro", price: 1800000, image: "p50.jpg", link: "../html/p50.html"}
+  ];
